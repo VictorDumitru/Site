@@ -1,0 +1,21 @@
+.pic img{
+    filter: grayscale(100);
+    filter: opacity(85%);
+}
+
+.pic img:hover{
+    filter: grayscale(0);
+    transform: scale(1.1);
+}
+
+body{
+    background-image: url(../../../images/backgr.jpg);
+}
+
+.container {
+    margin-top: 2%;
+}
+
+h3{
+    color: rgb(14, 14, 14);
+}

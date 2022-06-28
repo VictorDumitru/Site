@@ -1,0 +1,179 @@
+/* General */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    background-color: #171717;
+}
+
+/* Button */
+button {
+    border: none;
+    background-color: transparent;
+    margin: 10px;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:hover i {
+    color: rgb(102, 102, 102);
+}
+
+i {
+    color: gray;
+    font-size: 4em;
+}
+#d2 {
+    justify-content: center;
+    display: flex;
+    margin-top: 25px;
+    margin-left: 37%;
+}
+/* Book */
+.book {
+    width: 700px;
+    height: 850px;
+    position: relative;
+    transition: transform 1.2s;
+}
+
+.paper {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    perspective: 1500px;
+}
+
+.front {
+    backface-visibility: hidden;
+    border-left: 3px solid #131414;
+}
+
+.front, 
+.back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(221, 218, 215);
+    transform-origin: left;
+    transition: transform 1s;
+}
+
+.front {
+    z-index: 1;
+}
+
+.back {
+    z-index: 0;
+}
+
+.front-content,
+.back-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.back-content {
+    transform: rotateY(180deg)
+}
+
+/* Paper Flipped */
+.flipped .front,
+.flipped .back {
+    transform: rotateY(-180deg)
+}
+
+/* Paper Z-index */
+#p1 {
+    z-index: 3;
+}
+
+#p2 {
+    z-index: 2;
+}
+
+#p3 {
+    z-index: 1;
+}
+
+/* Customization */
+
+.book-title {
+    font-size: 20px;
+    position: fixed;
+    padding-top: 20px;
+}
+
+.cover-img,
+#f2 img,
+#b2 img,
+#f3 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#b1 {
+    padding: 20px;
+    text-align: center;
+    font-size: 1.2em;
+    justify-content: space-around;
+}
+
+#b1 h2 {
+    font-size: 2em;
+    margin-top: 97%;
+}
+
+#b1 p {
+    margin-bottom: 20px;
+}
+
+
+#strofe{
+    display: flex;
+    flex-direction: row;
+}
+
+#strofe h2,
+#b1 h2,
+#f2 h2,
+#f3 h2{
+    padding-left: 50px;
+    padding-top: 80px;
+    font-size: 17px;
+    color: rgb(92, 95, 94);
+}
+
+#b2 h1,
+#f2 h1,
+#f3 h1{
+    text-align: center;
+    font-size: 26px;
+    color: rgb(92, 95, 94);
+}
+
